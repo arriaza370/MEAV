@@ -13,6 +13,17 @@ use App\Http\Controllers\PaisController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+/**
+	* @OA\Get(
+    *     path="/api/ejecutar",
+    *     summary="informacion breve del endpoint desde el route",
+    *     @OA\Response(response="200", description="List of users"),
+    * )
+    */
+
+    Route::get('/ejecutar', ['RespuestaController::class,index']);
+    
 route ::post("/nuevo",[PaisController::class,"crearPais"]);
 
 route::get("/obtener",[PaisController::class,"obtener"]);
